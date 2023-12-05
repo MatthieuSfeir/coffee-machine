@@ -1,0 +1,13 @@
+C:\Users\Matthieu Sfeir\Desktop\coffee-machine\coffeeMachine\src\main\java\fr\imt\coffee_machine\component\Tank.java
+C:\Users\Matthieu Sfeir\Desktop\coffee-machine\coffeeMachine\src\main\java\fr\imt\coffee_machine\component\CoffeeGrinder.java
+C:\Users\Matthieu Sfeir\Desktop\coffee-machine\coffeeMachine\src\main\java\fr\imt\coffee_machine\component\WaterTank.java
+C:\Users\Matthieu Sfeir\Desktop\coffee-machine\coffeeMachine\src\main\java\fr\imt\coffee_machine\component\BeanTank.java
+C:\Users\Matthieu Sfeir\Desktop\coffee-machine\coffeeMachine\src\main\java\fr\imt\coffee_machine\component\ElectricalResistance.java
+C:\Users\Matthieu Sfeir\Desktop\coffee-machine\coffeeMachine\src\main\java\fr\imt\coffee_machine\exception\CannotMakeCremaWithSimpleCoffeeMachine.java
+C:\Users\Matthieu Sfeir\Desktop\coffee-machine\coffeeMachine\src\main\java\fr\imt\coffee_machine\CoffeeMachine.java
+C:\Users\Matthieu Sfeir\Desktop\coffee-machine\coffeeMachine\src\main\java\fr\imt\coffee_machine\exception\MachineNotPluggedException.java
+C:\Users\Matthieu Sfeir\Desktop\coffee-machine\coffeeMachine\src\main\java\fr\imt\coffee_machine\EspressoCoffeeMachine.java
+C:\Users\Matthieu Sfeir\Desktop\coffee-machine\coffeeMachine\src\main\java\fr\imt\coffee_machine\exception\LackOfWaterInTankException.java
+C:\Users\Matthieu Sfeir\Desktop\coffee-machine\coffeeMachine\src\main\java\fr\imt\coffee_machine\component\SteamPipe.java
+C:\Users\Matthieu Sfeir\Desktop\coffee-machine\coffeeMachine\src\main\java\fr\imt\coffee_machine\component\WaterPump.java
+C:\Users\Matthieu Sfeir\Desktop\coffee-machine\coffeeMachine\src\main\java\fr\imt\coffee_machine\exception\CoffeeTypeCupDifferentOfCoffeeTypeTankException.java
