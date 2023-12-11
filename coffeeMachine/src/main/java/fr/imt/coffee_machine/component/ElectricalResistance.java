@@ -5,7 +5,7 @@ import org.apache.logging.log4j.Logger;
 
 public class ElectricalResistance {
     private final double power;
-    public static final Logger logger = LogManager.getLogger(ElectricalResistance.class);
+    public static Logger logger = LogManager.getLogger(ElectricalResistance.class);
 
     /**
      * Résistance électrique permettant de chauffer l'eau de la cafetière

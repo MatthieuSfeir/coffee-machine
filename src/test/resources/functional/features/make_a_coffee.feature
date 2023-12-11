@@ -22,3 +22,30 @@ Feature: Make a coffee with a complete coffee machine
     Then the coffee machine return a coffee mug not empty
     And a coffee volume equals to 0.15
     And a coffee "cup" containing a coffee type "ROBUSTA"
+
+
+    Scenario : A user plug the coffee machine
+      Given a coffee machine with 0.10 l of min capacity, 3.0 l of max capacity, 600.0 l per h of water flow for the pump
+      When I plug the machine to electricity
+      Then the coffee machine turns on
+
+
+    Scenario: A user plug and make a coffee Arabica without adding coffee Arabica to the coffee machine
+      Given a coffee machine with 0.10 l of min capacity, 3.0 l of max capacity, 600.0 l per h of water flow for the pump
+      And a "cup" with a capacity of 0.15
+      When I plug the machine to electricity
+      And I add 1 liter of water in the water tank
+      And I made a coffee "ROBUSTA"
+      Then the coffee machine return an error message saying there is no coffee in the bean tank
+      And the coffee mug is empty
+
+    Scenario : A user plug the coffee machine but dont put enough water in the water tank
+      Given a coffee machine with 0.10 l of min capacity, 3.0 l of max capacity, 600.0 l per h of water flow for the pump
+      And a "cup" with a capacity of 0.15
+      When I plug the machine to electricity
+      And I add 1 liter of water in the water tank
+      And I add 0.08 liter of "ROBUSTA" in the bean tank
+      And I made a coffee "ROBUSTA"
+      Then the coffee machine return an error message saying there is not enough water in the water tank
+      And the coffee mug is empty
+

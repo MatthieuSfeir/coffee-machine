@@ -1,0 +1,9 @@
+component\CoffeeGrinderTest.class
+component\EspressoCoffeeMachineTest.class
+component\TankTest.class
+component\WaterPumpTest.class
+component\SteamPipeTest.class
+component\WaterTankTest.class
+CoffeeMachineUnitTest.class
+component\ElectricalResistanceTest.class
+component\BeanTankTest.class

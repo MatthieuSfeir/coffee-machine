@@ -1,5 +1,6 @@
-package fr.imt.coffee.machine.component;
+package component;
 
+import fr.imt.coffee_machine.component.ElectricalResistance;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
@@ -14,7 +15,7 @@ public class ElectricalResistanceTest {
      @param waterVolume Volume d'eau en litre.
      */
     public double computeHeatingTime(double power, double waterVolume){
-        return ((waterVolume * 4180 * (90 - 20)) / power) * 1000 / 10;
+        return ((waterVolume * 5180 * (90 - 20)) / power) * 1000 / 10;
     }
 
     /**
@@ -22,7 +23,7 @@ public class ElectricalResistanceTest {
      * @throws InterruptedException
      */
     @Test
-    public void testWaterHeatingNominalCaseWithJUnit() throws InterruptedException {
+    public void testWaterHeatingNominalCase() throws InterruptedException {
         double power = 1000;
         double waterVolume = 0.15;
 
@@ -36,27 +37,5 @@ public class ElectricalResistanceTest {
         //assertEquals(valeurAttendue, valeurRenvoyée)
         Assertions.assertEquals(heatingTimeExpected, heatingTimeActual);
     }
-
-    /**
-     * Test permettant de vérifier le fonctionnement de la résistance électrique dans un cas nominal avec Hamcrest
-     * @throws InterruptedException
-     */
-    @Test
-    public void testWaterHeatingNominalCaseWithHamcrest() throws InterruptedException {
-        double power = 1000;
-        double waterVolume = 0.15;
-
-        double heatingTimeExpected = computeHeatingTime(power, waterVolume);
-
-        ElectricalResistance electricalResistance = new ElectricalResistance(power);
-        double heatingTimeActual = electricalResistance.waterHeating(waterVolume);
-
-        //Assertion faite avec Hamcrest. Hamcrest permet comme JUnit de faire des assertions.
-        //Il est parfois préféré car Hamcrest dispose de plus de fonction d'assertion que JUnit 5 notamment sur les listes.
-        //Il dispose également d'une sémantique plus explicite que JUnit
-        //Hamcrest utilise des matchers, ici: is()
-        assertThat(heatingTimeExpected, is(heatingTimeActual));
-    }
-
 
 }

@@ -44,17 +44,16 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-antrun-plugin</artifactId>
+                <version>3.1.0</version>
                 <executions>
                     <execution>
                         <id>createThriftDir</id>
-                        <phase>test</phase>
+                        <phase>generate-sources</phase>
                         <configuration>
-                            <tasks>
-                                <!--suppress UnresolvedMavenProperty -->
-                                <delete dir="${env.HOME}/jacoco"/>
-                                <!--suppress UnresolvedMavenProperty -->
-                                <mkdir dir="${env.HOME}/jacoco"/>
-                            </tasks>
+                            <!-- Remplacez le paramètre 'tasks' par 'target' -->
+                            <target>
+                                <mkdir dir="${project.build.directory}/generated-sources/thrift"/>
+                            </target>
                         </configuration>
                         <goals>
                             <goal>run</goal>

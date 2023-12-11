@@ -6,7 +6,7 @@ import org.apache.logging.log4j.Logger;
 
 public class WaterPump {
 
-    public static final Logger logger = LogManager.getLogger(WaterPump.class);
+    public static Logger logger = LogManager.getLogger(WaterPump.class);
     private final double pumpingCapacity;
 
     /**
